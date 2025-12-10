@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tattoo Galerie | Moestwanted.Arts Sticker</title>
+    <title>Tattoo Gallery | Moestwanted.Arts Tattoo</title>
     <meta name="description"
-        content="Entdecke meine bisherigen Arbeiten. Fineline, Realistic, Portraits und mehr. Lass dich inspirieren für dein nächstes Tattoo.">
+        content="Discover my past work. Fineline, Realistic, Portraits and more. Get inspired for your next tattoo.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -25,14 +25,14 @@
     </style>
     <!-- Font: Blank River -->
     <link href="https://fonts.cdnfonts.com/css/blank-river" rel="stylesheet">
-    <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
+    <link rel="icon" type="image/jpeg" href="../assets/logo/elmo-2.jpg">
 </head>
 
 <body class="bg-gray-900 text-white min-h-screen flex flex-col relative">
 
     <!-- Background -->
     <div class="fixed inset-0 z-[-1]">
-        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-50">
+        <img src="../assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-50">
         <div class="absolute inset-0 bg-black/70"></div>
     </div>
 
@@ -41,7 +41,7 @@
         <div class="container mx-auto px-4 h-24 flex items-center justify-between">
             <!-- Logo -->
             <a href="index.html" class="block">
-                <img src="assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto">
+                <img src="../assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto">
             </a>
 
             <div class="flex items-center gap-8">
@@ -64,9 +64,9 @@
 
                     <!-- Language Switcher -->
                     <div class="flex items-center text-sm font-medium ml-2">
-                        <span class="text-white cursor-default">DE</span>
+                        <a href="../gallery.html" class="text-gray-400 hover:text-white transition-colors">DE</a>
                         <span class="mx-1 text-gray-600">/</span>
-                        <a href="en/gallery.html" class="text-gray-400 hover:text-white transition-colors">EN</a>
+                        <span class="text-white cursor-default">EN</span>
                     </div>
                     <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80 hover:text-white">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@
     <footer class="bg-black py-6 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center text-sm text-gray-500 flex justify-center items-center gap-6">
             <span>© 2525 Moestwanted.Arts</span>
-            <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+            <a href="impressum.html" class="hover:text-white transition-colors">Imprint</a>
         </div>
     </footer>
 
@@ -147,14 +147,14 @@
             div.className = 'aspect-square bg-gray-800 rounded-lg overflow-hidden cursor-zoom-in relative group';
 
             const img = document.createElement('img');
-            img.dataset.src = `assets/big-gallery/${file}`; // Lazy loading via IntersectionObserver
+            img.dataset.src = `../assets/big-gallery/${file}`; // Lazy loading via IntersectionObserver
             img.alt = 'Tattoo Gallery Image';
             img.className = 'w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:scale-105 transform group-hover:transition-transform group-hover:duration-700';
 
             div.appendChild(img);
             div.addEventListener('click', (e) => {
                 e.stopPropagation();
-                openLightbox(`assets/big-gallery/${file}`);
+                openLightbox(`../assets/big-gallery/${file}`);
             });
             grid.appendChild(div);
         });
