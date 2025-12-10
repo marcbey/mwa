@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moestwanted.Arts Tattoo</title>
+    <title>Moestwanted.Arts Tattoo | Stuttgart | Fineline & Realistic</title>
+    <meta name="description"
+        content="Willkommen bei Moestwanted.Arts Tattoo in Stuttgart. Dein Experte für Fineline, Realistic und Custom Tattoos. Jetzt Termin vereinbaren!">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font -->
@@ -12,9 +14,27 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
+
+        p a {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+
+        p a:hover {
+            color: #d1d5db;
+        }
     </style>
+    <!-- Font: Blank River -->
+    <link href="https://fonts.cdnfonts.com/css/blank-river" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+        }
+    </style>
     <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
 </head>
 
@@ -22,8 +42,8 @@
 
     <!-- Background -->
     <div class="fixed inset-0 z-[-1]">
-        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-black/80"></div>
+        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-50">
+        <div class="absolute inset-0 bg-black/70"></div>
     </div>
 
     <!-- Header -->
@@ -38,6 +58,7 @@
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center gap-6 text-sm font-medium tracking-wide">
                     <a href="gallery.html" class="hover:text-gray-300 transition-colors">Gallery</a>
+                    <a href="about-moe.html" class="hover:text-gray-300 transition-colors">About Moe</a>
                     <a href="faq.html" class="hover:text-gray-300 transition-colors">FAQ</a>
                     <a href="contact.html" class="hover:text-gray-300 transition-colors">Contact & Booking</a>
                 </nav>
@@ -67,8 +88,9 @@
             <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-black/95">
                 <nav class="flex flex-col p-4 gap-4 text-center">
                     <a href="gallery.html" class="block py-2 hover:bg-white/10 rounded">Gallery</a>
+                    <a href="about-moe.html" class="block py-2 hover:bg-white/10 rounded">About Moe</a>
                     <a href="faq.html" class="block py-2 hover:bg-white/10 rounded">FAQ</a>
-                    <a href="contact.html" class="block py-2 hover:bg-white/10 rounded">Contact & Booking</a>
+                    <a href="contact.html" class="block py-2 bg-white/10 rounded">Contact & Booking</a>
                 </nav>
             </div>
     </header>
@@ -78,7 +100,8 @@
 
         <!-- Welcome Section -->
         <section class="text-center space-y-4">
-            <h1 class="text-3xl md:text-5xl font-bold tracking-tight">
+            <h1 class="text-4xl md:text-6xl text-white font-normal tracking-wide"
+                style="font-family: 'Blank River', sans-serif;">
                 Welcome to Moestwanted.Arts Tattoo
             </h1>
         </section>
@@ -92,47 +115,49 @@
                     <!-- From previous step finding: IMG_3345.AVIF, 1-IMG_3265.AVIF, IMG_3312.AVIF, IMG_3304.AVIF... -->
                     <!-- I will use a mix of known files. -->
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3345.AVIF"
+                                src="assets/big-gallery/1-IMG_3389.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 1"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/1-IMG_3265.AVIF"
+                                src="assets/big-gallery/2-IMG_3360.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 2"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3312.AVIF"
+                                src="assets/big-gallery/3-IMG_3363.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 3"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3304.AVIF"
+                                src="assets/big-gallery/4-IMG_3307.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 4"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3353.AVIF"
+                                src="assets/big-gallery/5-IMG_3275.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 5"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3282.AVIF"
+                                src="assets/big-gallery/6-IMG_3392.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 6"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/1-IMG_3265.AVIF"
+                                src="assets/big-gallery/7-IMG_3391.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 7"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3390.AVIF"
+                                src="assets/big-gallery/8-IMG_3395.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 8"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3369.AVIF"
+                                src="assets/big-gallery/9-IMG_3367.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 9"></a></div>
                     <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="assets/big-gallery/IMG_3386.AVIF"
+                                src="assets/big-gallery/10-IMG_3357.AVIF"
                                 class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
                                 loading="lazy" alt="Tattoo 10"></a></div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </section>
 
@@ -143,11 +168,13 @@
                     MOE steht für Emphatie, Professionalität und Vertrauen.
                 </p>
                 <p class="text-lg text-gray-300">
-                    Hier gibt es keine lieblosen Tattoos von der Stange
+                    Hier gibt es keine lieblosen Tattoos von der Stange.
                 </p>
                 <p class="text-gray-400 leading-relaxed">
-                    Werfe doch gleich mal einen Blick in meine Galerie oder folge mir auf Instagram und mach dir selbst
-                    ein Bild davon. In den FAQs' werden hoffentlich alle deine Fragen beantwortet.
+                    Werfe doch gleich mal einen Blick in meine <a href="gallery.html">Galerie</a> oder folge mir auf
+                    Instagram und mach dir selbst
+                    ein Bild davon. In den <a href="faq.html">FAQs'</a> werden hoffentlich alle deine Fragen
+                    beantwortet.
                 </p>
             </div>
             <div class="flex justify-center md:justify-end">
@@ -163,9 +190,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
-            <p class="mb-2">© 2525 Moestwanted.Arts</p>
+    <footer class="bg-black py-6 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500 flex justify-center items-center gap-6">
+            <span>© 2525 Moestwanted.Arts</span>
             <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
         </div>
     </footer>
@@ -189,6 +216,10 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
         });
 

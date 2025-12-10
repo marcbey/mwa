@@ -1,20 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Moestwanted.Arts Tattoo</title>
+    <title>Tattoo Galerie | Moestwanted.Arts Sticker</title>
+    <meta name="description"
+        content="Entdecke meine bisherigen Arbeiten. Fineline, Realistic, Portraits und mehr. Lass dich inspirieren für dein nächstes Tattoo.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
+
+        p a {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+
+        p a:hover {
+            color: #d1d5db;
+        }
     </style>
+    <!-- Font: Blank River -->
+    <link href="https://fonts.cdnfonts.com/css/blank-river" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
 </head>
 
-<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+<body class="bg-gray-900 text-white min-h-screen flex flex-col relative">
+
+    <!-- Background -->
+    <div class="fixed inset-0 z-[-1]">
+        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-50">
+        <div class="absolute inset-0 bg-black/70"></div>
+    </div>
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
@@ -27,6 +47,7 @@
             <div class="flex items-center gap-8">
                 <nav class="hidden md:flex items-center gap-6 text-sm font-medium tracking-wide">
                     <a href="gallery.html" class="text-white">Gallery</a>
+                    <a href="about-moe.html" class="text-gray-400 hover:text-white transition-colors">About Moe</a>
                     <a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
                     <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact &
                         Booking</a>
@@ -51,6 +72,7 @@
             <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-black/95">
                 <nav class="flex flex-col p-4 gap-4 text-center">
                     <a href="gallery.html" class="block py-2 bg-white/10 rounded">Gallery</a>
+                    <a href="about-moe.html" class="block py-2 hover:bg-white/10 rounded">About Moe</a>
                     <a href="faq.html" class="block py-2 hover:bg-white/10 rounded">FAQ</a>
                     <a href="contact.html" class="block py-2 hover:bg-white/10 rounded">Contact & Booking</a>
                 </nav>
@@ -59,7 +81,8 @@
 
     <!-- Main Content -->
     <main class="flex-grow container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-8 text-center">Moestwanted.Arts Tattoo Gallery</h1>
+        <h1 class="text-4xl md:text-5xl font-normal mb-8 text-center tracking-wide"
+            style="font-family: 'Blank River', sans-serif;">Moestwanted.Arts Tattoo Gallery</h1>
 
         <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- Images will be injected here by JS -->
@@ -79,21 +102,35 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-gray-800 mt-8">
-        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
-            <p class="mb-2">© 2525 Moestwanted.Arts</p>
+    <footer class="bg-black py-6 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500 flex justify-center items-center gap-6">
+            <span>© 2525 Moestwanted.Arts</span>
             <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
         </div>
     </footer>
 
     <script>
-        // Data
         const filenames = [
-            '1-IMG_3265.AVIF', '1-IMG_3266.AVIF'
+            "1-IMG_3389.AVIF",
+            "2-IMG_3360.AVIF",
+            "3-IMG_3363.AVIF",
+            "4-IMG_3307.AVIF",
+            "5-IMG_3275.AVIF",
+            "6-IMG_3392.AVIF",
+            "7-IMG_3391.AVIF",
+            "8-IMG_3395.AVIF",
+            "9-IMG_3367.AVIF",
+            "10-IMG_3357.AVIF"
         ];
-        // Populate range 3267 to 3395
-        for (let i = 3267; i <= 3395; i++) {
-            filenames.push(`IMG_${i}.AVIF`);
+
+        // Exclude IDs used in the top 10
+        const excludedIds = [3389, 3360, 3363, 3307, 3275, 3392, 3391, 3395, 3367, 3357];
+
+        // Populate range 3265 to 3395
+        for (let i = 3265; i <= 3395; i++) {
+            if (!excludedIds.includes(i)) {
+                filenames.push(`IMG_${i}.AVIF`);
+            }
         }
 
         // Render Grid

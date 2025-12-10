@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Moestwanted.Arts Tattoo</title>
+    <title>FAQ - Häufige Fragen | Moestwanted.Arts Tattoo Stuttgart</title>
+    <meta name="description"
+        content="Antworten auf deine Fragen zu Terminvergabe, Pflege, Alter, Preisen und mehr bei Moestwanted.Arts Tattoo in Stuttgart.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", sans-serif;
         }
 
         /* Smooth detail opening */
@@ -19,7 +21,19 @@
         details>summary::-webkit-details-marker {
             display: none;
         }
+
+        p a {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+
+        p a:hover {
+            color: #d1d5db;
+        }
     </style>
+    <!-- Font: Blank River -->
+    <link href="https://fonts.cdnfonts.com/css/blank-river" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
 </head>
 
@@ -27,8 +41,8 @@
 
     <!-- Background -->
     <div class="fixed inset-0 z-[-1]">
-        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover" style="opacity: 0.2">
-        <div class="absolute inset-0 bg-black/80"></div>
+        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-50">
+        <div class="absolute inset-0 bg-black/70"></div>
     </div>
 
     <!-- Header -->
@@ -41,6 +55,7 @@
             <div class="flex items-center gap-8">
                 <nav class="hidden md:flex items-center gap-6 text-sm font-medium tracking-wide">
                     <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="about-moe.html" class="text-gray-400 hover:text-white transition-colors">About Moe</a>
                     <a href="faq.html" class="text-white">FAQ</a>
                     <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact &
                         Booking</a>
@@ -65,6 +80,7 @@
             <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-black/95">
                 <nav class="flex flex-col p-4 gap-4 text-center">
                     <a href="gallery.html" class="block py-2 hover:bg-white/10 rounded">Gallery</a>
+                    <a href="about-moe.html" class="block py-2 hover:bg-white/10 rounded">About Moe</a>
                     <a href="faq.html" class="block py-2 bg-white/10 rounded">FAQ</a>
                     <a href="contact.html" class="block py-2 hover:bg-white/10 rounded">Contact & Booking</a>
                 </nav>
@@ -73,7 +89,8 @@
 
     <!-- Main Content -->
     <main class="flex-grow container mx-auto px-4 py-12 max-w-3xl">
-        <h1 class="text-3xl font-bold mb-12 text-center">Häufig gestellte Fragen:</h1>
+        <h1 class="text-4xl md:text-5xl font-normal mb-12 text-center tracking-wide"
+            style="font-family: 'Blank River', sans-serif;">Häufig gestellte Fragen:</h1>
 
         <div class="space-y-4">
 
@@ -89,27 +106,28 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Du
-                    musst mindestens 18 Jahre alt sein! Auch wenn du eine Einverständniserklärung deiner Eltern hast,
-                    mache ich KEINE AUSNAHME!
-
-                    Folgende Umstände schließen eine Tätowierung aus:
-
-                    • Schwangerschaft / Stillzeit
-                    • nach einer Operation (abhängig vom Gesundheitszustand)
-                    • während der Einnahme von Antibiotika
-                    (mind. 4 Wochen Pause, erst dann tätowiere ich Dich)
-                    • Hepatitis (alle Formen)
-                    • HIV
-                    • Bluterkrankheit
-                    • Fieber
-                    • Neurodermitis an der zu tätowierenden Hautstelle
-                    • Akne an der zu tätowierenden Hautstelle
-                    • alkoholisiert und unter schwerem Drogen- oder Medikamenteneinfluss
-                    • bei Verwendung von Betäubungscremes o.Ä.
-                    • bei Herz - Kreislaufstörungen, Schwindel oder Ohnmachtsgefahr
-                    • bei störendem Verhalten während der Sitzung
-                    • bei unhygienischem Erscheinen zum Termin</div>
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    <p class="mb-2">Du musst mindestens 18 Jahre alt sein! Auch wenn du eine Einverständniserklärung
+                        deiner Eltern hast, mache ich KEINE AUSNAHME!</p>
+                    <p class="mb-2">Folgende Umstände schließen eine Tätowierung aus:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Schwangerschaft / Stillzeit</li>
+                        <li>nach einer Operation (abhängig vom Gesundheitszustand)</li>
+                        <li>während der Einnahme von Antibiotika (mind. 4 Wochen Pause, erst dann tätowiere ich Dich)
+                        </li>
+                        <li>Hepatitis (alle Formen)</li>
+                        <li>HIV</li>
+                        <li>Bluterkrankheit</li>
+                        <li>Fieber</li>
+                        <li>Neurodermitis an der zu tätowierenden Hautstelle</li>
+                        <li>Akne an der zu tätowierenden Hautstelle</li>
+                        <li>alkoholisiert und unter schwerem Drogen- oder Medikamenteneinfluss</li>
+                        <li>bei Verwendung von Betäubungscremes o.Ä.</li>
+                        <li>bei Herz - Kreislaufstörungen, Schwindel oder Ohnmachtsgefahr</li>
+                        <li>bei störendem Verhalten während der Sitzung</li>
+                        <li>bei unhygienischem Erscheinen zum Termin</li>
+                    </ul>
+                </div>
             </details>
 
             <!-- Q2 -->
@@ -125,14 +143,15 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Der
-                    Erstkontakt für Neukunden erfolgt ausschließlichüber die Kontaktfunktion hier auf der Website!
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    Der Erstkontakt für Neukunden erfolgt ausschließlich über die Kontaktfunktion hier auf der Website!
                     Sobald dieser statt gefunden hat, melde ich mich bei dir um einen persönlichen Termin für eine
                     ausführliche Beratung zu vereinbaren. Ich arbeite in einem Atelier an meiner privaten Adresse, das
                     bedeutet, während deiner Sitzung stören uns weder Laufkundschaft noch spontane Besuche, und ich kann
                     mich in einer entspannten Atmosphäre voll und ganz auf dich konzentrieren. Deshalb bitte ich dich
                     nicht einfach ohne Termin vorbei zu kommen, da ich dir dann nicht garantieren kann, dass ich Zeit
-                    für dich habe.</div>
+                    für dich habe.
+                </div>
             </details>
 
             <!-- Q3 -->
@@ -147,8 +166,9 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Mein
-                    Studio ist in der Nikolaus Str. 6; 70190 Stuttgart-Ost, Haltestelle Stöckach</div>
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    Mein Studio ist in der Nikolaus Str. 6; 70190 Stuttgart-Ost, Haltestelle Stöckach
+                </div>
             </details>
 
             <!-- Q4 -->
@@ -163,10 +183,11 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">In
-                    der Regel bekommst du relativ zeitnah einen Termin. Die tatsächliche Wartezeit hängt davon ab, wie
-                    lange ich an deinem Entwurf arbeite. Wenn du planst, dich erst in ein paar Monaten tätowieren zu
-                    lassen, dann melde dich bitte erst ca. 2-4 Wochen davor.</div>
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    In der Regel bekommst du relativ zeitnah einen Termin. Die tatsächliche Wartezeit hängt davon ab,
+                    wie lange ich an deinem Entwurf arbeite. Wenn du planst, dich erst in ein paar Monaten tätowieren zu
+                    lassen, dann melde dich bitte erst ca. 2-4 Wochen davor.
+                </div>
             </details>
 
             <!-- Q5 -->
@@ -181,11 +202,12 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
                     Sobald ich mich mit meinem Entwurf wohl fühle, werde ich ihn dir per Whatsapp oder Mail senden. Du
                     solltest dich vorher mit meinen Arbeiten und Stilen auseinandersetzen, um zu wissen, auf was du dich
                     einlässt. Die besten Tattoos entstehen immer, wenn du mich nicht einschränkst, mir also freie Hand
-                    lässt und Vertrauen in meine Erfahrung und Kreativität hast.</div>
+                    lässt und Vertrauen in meine Erfahrung und Kreativität hast.
+                </div>
             </details>
 
             <!-- Q6 -->
@@ -201,14 +223,15 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Ich
-                    zeichne nur wenn wir auch einen Termin zum tätowieren abgemacht haben, also kannst du dir meine
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    Ich zeichne nur wenn wir auch einen Termin zum tätowieren abgemacht haben, also kannst du dir meine
                     Zeichnungen nicht woanders tätowieren lassen! Meine Arbeit basiert auf Vertrauensbasis, wenn du also
                     meinen Entwurf von einem anderen Tätowierer stechen lässt, schadest du nicht nur dessen Reputation,
                     sondern du brichst auch mein Vertrauen. Wichtig ist auch zu erwähnen, dass ich keine Kopien bereits
                     vorhandener Tattoos steche. Dazu ist mein Respekt vor der künstlerischen Leistung anderer zu groß.
                     Ausnahme, Dir gefällt ein Bild oder eine Zeichnung und du hast den Künstler schriftlich um Erlaubnis
-                    gefragt und er hat eingewilligt!</div>
+                    gefragt und er hat eingewilligt!
+                </div>
             </details>
 
             <!-- Q7 -->
@@ -223,13 +246,18 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Für
-                    einen Termin benötige ich eine Anzahlung von 50€ bis 200€, je nach Motivgröße! Die Kontodaten werden
-                    dir mit dem Terminvorschlag per Mail zugeschickt. Eine Absage muss mindesten 7 Tage vorher
-                    stattfinden, damit ich genug Zeit habe den Termin neu zu vergeben und um die Anzahlung zu erstatten.
-                    Ansonsten wird die Anzahlung als Entschädigung einbehalten! Das gilt auch bei wetterbedingten
-                    Absagen oder Krankheit! Ich verdiene mit meiner Arbeit meinen Lebensunterhalt und habe leider keine
-                    Zeit zu verschenken.</div>
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Für einen Termin benötige ich eine Anzahlung von 50€ bis 200€, je nach Motivgröße!</li>
+                        <li>Die Kontodaten werden dir mit dem Terminvorschlag per Mail zugeschickt.</li>
+                        <li>Eine Absage muss mindesten 7 Tage vorher stattfinden, damit ich genug Zeit habe den Termin
+                            neu zu vergeben und um die Anzahlung zu erstatten.</li>
+                        <li>Ansonsten wird die Anzahlung als Entschädigung einbehalten!</li>
+                        <li>Das gilt auch bei wetterbedingten Absagen oder Krankheit!</li>
+                        <li>Ich verdiene mit meiner Arbeit meinen Lebensunterhalt und habe leider keine Zeit zu
+                            verschenken.</li>
+                    </ul>
+                </div>
             </details>
 
             <!-- Q8 -->
@@ -244,11 +272,12 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Die
-                    Abrechnung erfolgt nach Stunden. Das Anbringen des Motivs, Vorsorge und Nachsorge zählen zur
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    Die Abrechnung erfolgt nach Stunden. Das Anbringen des Motivs, Vorsorge und Nachsorge zählen zur
                     Arbeitszeit. Bezahlt wird ausschließlich in bar, cash am Ende jeder Sitzung. Wie lange eine Sitzung
                     dauert, kann man fast nie vorab wissen, da dazu mehrere Faktoren zählen. Denke also bitte daran,
-                    ausreichend Geld dabei zu haben.</div>
+                    ausreichend Geld dabei zu haben.
+                </div>
             </details>
 
             <!-- Q9 -->
@@ -263,10 +292,11 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
                     Solltest du noch keine Erfahrung mit der Pflege von Tattoos haben, bekommst du selbstverständlich
                     von mir eine Pflegeanleitung via Whatapp zugeschickt. Für 5€ bekommst du jeweils eine
-                    Tattoo-Pflegesalbe.</div>
+                    Tattoo-Pflegesalbe.
+                </div>
             </details>
 
             <!-- Q10 -->
@@ -281,7 +311,7 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
                     Bitte erscheine zu Deinem Termin gepflegt, nüchtern und gesund! Sollte ich Gegenteiliges
                     feststellen, behalte ich mir vor, die Sitzung nicht zu beginnen und die Anzahlung einzubehalten.
                     Trotz Einhaltung größtmöglicher Hygiene kann es zu Komplikationen kommen. Allergische Reaktionen und
@@ -305,11 +335,12 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Bei
-                    Text-Tattoos obliegt dem Kunden die Richtigkeit der Rechtschreibung, bis zur endgültigen Freigabe
-                    durch ihn! Bei römischen Ziffern, Zitaten in Fremdsprachen, Namen und Daten jeglicher Art bitte
-                    stets selber darauf achten, ob in der Vorlage alles stimmt. Spätere Änderungen sind nur bedingt
-                    möglich.</div>
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    Bei Text-Tattoos obliegt dem Kunden die Richtigkeit der Rechtschreibung, bis zur endgültigen
+                    Freigabe durch ihn! Bei römischen Ziffern, Zitaten in Fremdsprachen, Namen und Daten jeglicher Art
+                    bitte stets selber darauf achten, ob in der Vorlage alles stimmt. Spätere Änderungen sind nur
+                    bedingt möglich.
+                </div>
             </details>
 
             <!-- Q12 -->
@@ -324,20 +355,21 @@
                         </svg>
                     </span>
                 </summary>
-                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Alle
-                    verwendeten Tattoofarben sind vom Bundesgesundheitsamt geprüft, freigegeben und zertifiziert. Manche
-                    Farben enthalten kleine Mengen von Nickel, Cadmium oder Titan, welche evtl. kleinere Reaktion
+                <div class="p-6 text-gray-300 leading-relaxed border-t border-gray-700/50">
+                    Alle verwendeten Tattoofarben sind vom Bundesgesundheitsamt geprüft, freigegeben und zertifiziert.
+                    Manche Farben enthalten kleine Mengen von Nickel, Cadmium oder Titan, welche evtl. kleinere Reaktion
                     während der Abheilphase zur Ursache haben, jedoch nach ein paar Tagen meist wieder verschwinden,
-                    außer vielleicht bei bekannten Allergien. Es werden diesbezüglich keine Probetattoos gemacht.</div>
+                    außer vielleicht bei bekannten Allergien. Es werden diesbezüglich keine Probetattoos gemacht.
+                </div>
             </details>
 
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
-            <p class="mb-2">© 2525 Moestwanted.Arts</p>
+    <footer class="bg-black py-6 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500 flex justify-center items-center gap-6">
+            <span>© 2525 Moestwanted.Arts</span>
             <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
         </div>
     </footer>
