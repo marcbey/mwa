@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Moestwanted.Arts Tattoo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        /* Smooth detail opening */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+    <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col relative">
+
+    <!-- Background -->
+    <div class="fixed inset-0 z-[-1]">
+        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover" style="opacity: 0.2">
+        <div class="absolute inset-0 bg-black/80"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+            <a href="index.html" class="block">
+                <img src="assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto">
+            </a>
+
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium tracking-wide">
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="faq.html" class="text-white">FAQ</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact &
+                        Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/mwa.tattoo" target="_blank"
+                        class="hover:opacity-80 transition-opacity">
+                        <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-black/95">
+                <nav class="flex flex-col p-4 gap-4 text-center">
+                    <a href="gallery.html" class="block py-2 hover:bg-white/10 rounded">Gallery</a>
+                    <a href="faq.html" class="block py-2 bg-white/10 rounded">FAQ</a>
+                    <a href="contact.html" class="block py-2 hover:bg-white/10 rounded">Contact & Booking</a>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-3xl">
+        <h1 class="text-3xl font-bold mb-12 text-center">Häufig gestellte Fragen:</h1>
+
+        <div class="space-y-4">
+
+            <!-- Q1 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Wie alt muss ich sein, um mich tätowieren zu lassen?</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Du
+                    musst mindestens 18 Jahre alt sein! Auch wenn du eine Einverständniserklärung deiner Eltern hast,
+                    mache ich KEINE AUSNAHME!
+
+                    Folgende Umstände schließen eine Tätowierung aus:
+
+                    • Schwangerschaft / Stillzeit
+                    • nach einer Operation (abhängig vom Gesundheitszustand)
+                    • während der Einnahme von Antibiotika
+                    (mind. 4 Wochen Pause, erst dann tätowiere ich Dich)
+                    • Hepatitis (alle Formen)
+                    • HIV
+                    • Bluterkrankheit
+                    • Fieber
+                    • Neurodermitis an der zu tätowierenden Hautstelle
+                    • Akne an der zu tätowierenden Hautstelle
+                    • alkoholisiert und unter schwerem Drogen- oder Medikamenteneinfluss
+                    • bei Verwendung von Betäubungscremes o.Ä.
+                    • bei Herz - Kreislaufstörungen, Schwindel oder Ohnmachtsgefahr
+                    • bei störendem Verhalten während der Sitzung
+                    • bei unhygienischem Erscheinen zum Termin</div>
+            </details>
+
+            <!-- Q2 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Kann ich mal für eine Beratung oder einfach so vorbeikommen?
+                    </h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Der
+                    Erstkontakt für Neukunden erfolgt ausschließlichüber die Kontaktfunktion hier auf der Website!
+                    Sobald dieser statt gefunden hat, melde ich mich bei dir um einen persönlichen Termin für eine
+                    ausführliche Beratung zu vereinbaren. Ich arbeite in einem Atelier an meiner privaten Adresse, das
+                    bedeutet, während deiner Sitzung stören uns weder Laufkundschaft noch spontane Besuche, und ich kann
+                    mich in einer entspannten Atmosphäre voll und ganz auf dich konzentrieren. Deshalb bitte ich dich
+                    nicht einfach ohne Termin vorbei zu kommen, da ich dir dann nicht garantieren kann, dass ich Zeit
+                    für dich habe.</div>
+            </details>
+
+            <!-- Q3 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Wo befindet sich dein Studio?</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Mein
+                    Studio ist in der Nikolaus Str. 6; 70190 Stuttgart-Ost, Haltestelle Stöckach</div>
+            </details>
+
+            <!-- Q4 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Wie lange muss man auf einen Termin warten?</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">In
+                    der Regel bekommst du relativ zeitnah einen Termin. Die tatsächliche Wartezeit hängt davon ab, wie
+                    lange ich an deinem Entwurf arbeite. Wenn du planst, dich erst in ein paar Monaten tätowieren zu
+                    lassen, dann melde dich bitte erst ca. 2-4 Wochen davor.</div>
+            </details>
+
+            <!-- Q5 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Wann kann ich mit dem Entwurf rechnen?</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">
+                    Sobald ich mich mit meinem Entwurf wohl fühle, werde ich ihn dir per Whatsapp oder Mail senden. Du
+                    solltest dich vorher mit meinen Arbeiten und Stilen auseinandersetzen, um zu wissen, auf was du dich
+                    einlässt. Die besten Tattoos entstehen immer, wenn du mich nicht einschränkst, mir also freie Hand
+                    lässt und Vertrauen in meine Erfahrung und Kreativität hast.</div>
+            </details>
+
+            <!-- Q6 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Kannst du mir etwas zeichnen und ich lasse es bei jemand
+                        anderem tätowieren?</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Ich
+                    zeichne nur wenn wir auch einen Termin zum tätowieren abgemacht haben, also kannst du dir meine
+                    Zeichnungen nicht woanders tätowieren lassen! Meine Arbeit basiert auf Vertrauensbasis, wenn du also
+                    meinen Entwurf von einem anderen Tätowierer stechen lässt, schadest du nicht nur dessen Reputation,
+                    sondern du brichst auch mein Vertrauen. Wichtig ist auch zu erwähnen, dass ich keine Kopien bereits
+                    vorhandener Tattoos steche. Dazu ist mein Respekt vor der künstlerischen Leistung anderer zu groß.
+                    Ausnahme, Dir gefällt ein Bild oder eine Zeichnung und du hast den Künstler schriftlich um Erlaubnis
+                    gefragt und er hat eingewilligt!</div>
+            </details>
+
+            <!-- Q7 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Anzahlung/Terminabsage</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Für
+                    einen Termin benötige ich eine Anzahlung von 50€ bis 200€, je nach Motivgröße! Die Kontodaten werden
+                    dir mit dem Terminvorschlag per Mail zugeschickt. Eine Absage muss mindesten 7 Tage vorher
+                    stattfinden, damit ich genug Zeit habe den Termin neu zu vergeben und um die Anzahlung zu erstatten.
+                    Ansonsten wird die Anzahlung als Entschädigung einbehalten! Das gilt auch bei wetterbedingten
+                    Absagen oder Krankheit! Ich verdiene mit meiner Arbeit meinen Lebensunterhalt und habe leider keine
+                    Zeit zu verschenken.</div>
+            </details>
+
+            <!-- Q8 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Abrechnung/Bezahlung</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Die
+                    Abrechnung erfolgt nach Stunden. Das Anbringen des Motivs, Vorsorge und Nachsorge zählen zur
+                    Arbeitszeit. Bezahlt wird ausschließlich in bar, cash am Ende jeder Sitzung. Wie lange eine Sitzung
+                    dauert, kann man fast nie vorab wissen, da dazu mehrere Faktoren zählen. Denke also bitte daran,
+                    ausreichend Geld dabei zu haben.</div>
+            </details>
+
+            <!-- Q9 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Pflege/Nachsorge</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">
+                    Solltest du noch keine Erfahrung mit der Pflege von Tattoos haben, bekommst du selbstverständlich
+                    von mir eine Pflegeanleitung via Whatapp zugeschickt. Für 5€ bekommst du jeweils eine
+                    Tattoo-Pflegesalbe.</div>
+            </details>
+
+            <!-- Q10 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Hygiene/ Komplikationen</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">
+                    Bitte erscheine zu Deinem Termin gepflegt, nüchtern und gesund! Sollte ich Gegenteiliges
+                    feststellen, behalte ich mir vor, die Sitzung nicht zu beginnen und die Anzahlung einzubehalten.
+                    Trotz Einhaltung größtmöglicher Hygiene kann es zu Komplikationen kommen. Allergische Reaktionen und
+                    auch entzündliche Reaktionen sind möglich. Auch die Gefahr einer Infektion ist nicht auszuschließen.
+                    Zu deren Vermeidung solcher gehört auch die richtige Pflege der Wunde. Eine gesundheitlich
+                    unbedenkliche Komplikation: „BlowOut“ bedeutet, dass die Farbe in der Haut, ähnlich wie Tinte auf
+                    den Löschpapier, „ausläuft“. Das ist grundsätzlich nie auszuschließen und ist abhängig von deinem
+                    Bindegewebe. Dem Tätowierer ist es nicht möglich, dieses Risiko im Vorfeld ganz auszuschließen.
+                </div>
+            </details>
+
+            <!-- Q11 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Rechtschreibung bei Text-Tattoos</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Bei
+                    Text-Tattoos obliegt dem Kunden die Richtigkeit der Rechtschreibung, bis zur endgültigen Freigabe
+                    durch ihn! Bei römischen Ziffern, Zitaten in Fremdsprachen, Namen und Daten jeglicher Art bitte
+                    stets selber darauf achten, ob in der Vorlage alles stimmt. Spätere Änderungen sind nur bedingt
+                    möglich.</div>
+            </details>
+
+            <!-- Q12 -->
+            <details class="group bg-gray-800/50 backdrop-blur rounded-lg border border-gray-700 overflow-hidden">
+                <summary
+                    class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors">
+                    <h3 class="font-medium text-lg pr-4">Information für Allergiker</h3>
+                    <span class="transform group-open:rotate-180 transition-transform duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line border-t border-gray-700/50">Alle
+                    verwendeten Tattoofarben sind vom Bundesgesundheitsamt geprüft, freigegeben und zertifiziert. Manche
+                    Farben enthalten kleine Mengen von Nickel, Cadmium oder Titan, welche evtl. kleinere Reaktion
+                    während der Abheilphase zur Ursache haben, jedoch nach ein paar Tagen meist wieder verschwinden,
+                    außer vielleicht bei bekannten Allergien. Es werden diesbezüglich keine Probetattoos gemacht.</div>
+            </details>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="mb-2">© 2525 Moestwanted.Arts</p>
+            <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

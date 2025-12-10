@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moestwanted.Arts Tattoo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+    </style>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col relative">
+
+    <!-- Background -->
+    <div class="fixed inset-0 z-[-1]">
+        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-black/80"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="block">
+                <img src="assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto">
+            </a>
+
+            <div class="flex items-center gap-8">
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium tracking-wide">
+                    <a href="gallery.html" class="hover:text-gray-300 transition-colors">Gallery</a>
+                    <a href="faq.html" class="hover:text-gray-300 transition-colors">FAQ</a>
+                    <a href="contact.html" class="hover:text-gray-300 transition-colors">Contact & Booking</a>
+                </nav>
+
+                <!-- Mobile Menu Button & Social -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/mwa.tattoo" target="_blank" rel="noopener noreferrer"
+                        class="hover:opacity-80 transition-opacity">
+                        <!-- Instagram Icon -->
+                        <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-black/95">
+                <nav class="flex flex-col p-4 gap-4 text-center">
+                    <a href="gallery.html" class="block py-2 hover:bg-white/10 rounded">Gallery</a>
+                    <a href="faq.html" class="block py-2 hover:bg-white/10 rounded">FAQ</a>
+                    <a href="contact.html" class="block py-2 hover:bg-white/10 rounded">Contact & Booking</a>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12 space-y-12 md:space-y-20">
+
+        <!-- Welcome Section -->
+        <section class="text-center space-y-4">
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight">
+                Welcome to Moestwanted.Arts Tattoo
+            </h1>
+        </section>
+
+        <!-- Slider Section -->
+        <section>
+            <div class="swiper mySwiper w-full h-[300px] md:h-[400px]">
+                <div class="swiper-wrapper">
+                    <!-- Slides (Hardcoded 10 sample images based on pattern) -->
+                    <!-- Note: Using some actual filenames found + pattern for demo if needed, but safe assumption for now to repeat or use finding -->
+                    <!-- From previous step finding: IMG_3345.AVIF, 1-IMG_3265.AVIF, IMG_3312.AVIF, IMG_3304.AVIF... -->
+                    <!-- I will use a mix of known files. -->
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3345.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 1"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/1-IMG_3265.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 2"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3312.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 3"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3304.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 4"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3353.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 5"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3282.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 6"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/1-IMG_3265.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 7"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3390.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 8"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3369.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 9"></a></div>
+                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
+                                src="assets/big-gallery/IMG_3386.AVIF"
+                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy" alt="Tattoo 10"></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center max-w-5xl mx-auto">
+            <div class="space-y-6 text-center md:text-left">
+                <p class="text-lg font-semibold leading-relaxed">
+                    MOE steht für Emphatie, Professionalität und Vertrauen.
+                </p>
+                <p class="text-lg text-gray-300">
+                    Hier gibt es keine lieblosen Tattoos von der Stange
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    Werfe doch gleich mal einen Blick in meine Galerie oder folge mir auf Instagram und mach dir selbst
+                    ein Bild davon. In den FAQs' werden hoffentlich alle deine Fragen beantwortet.
+                </p>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <a href="about-moe.html"
+                    class="group block relative overflow-hidden rounded-xl shadow-2xl w-full max-w-sm">
+                    <img src="assets/logo/moe.jpg" alt="Moe Portrait"
+                        class="w-full h-auto transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="mb-2">© 2525 Moestwanted.Arts</p>
+            <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Swiper Init
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: false,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Moestwanted.Arts Tattoo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+    </style>
+    <link rel="icon" type="image/jpeg" href="assets/logo/elmo-2.jpg">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col relative">
+
+    <!-- Background -->
+    <div class="fixed inset-0 z-[-1]">
+        <img src="assets/logo/studio.jpg" alt="Background" class="w-full h-full object-cover" style="opacity: 0.2">
+        <div class="absolute inset-0 bg-black/80"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+            <a href="index.html" class="block">
+                <img src="assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto">
+            </a>
+
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium tracking-wide">
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact &
+                        Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/mwa.tattoo" target="_blank"
+                        class="hover:opacity-80 transition-opacity">
+                        <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-black/95">
+                <nav class="flex flex-col p-4 gap-4 text-center">
+                    <a href="gallery.html" class="block py-2 hover:bg-white/10 rounded">Gallery</a>
+                    <a href="faq.html" class="block py-2 hover:bg-white/10 rounded">FAQ</a>
+                    <a href="contact.html" class="block py-2 hover:bg-white/10 rounded">Contact & Booking</a>
+                </nav>
+            </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-3xl">
+        <h1 class="text-3xl font-bold mb-8 text-center">Impressum</h1>
+
+        <div class="space-y-8 text-gray-300">
+            <div class="prose prose-invert max-w-none">
+                <p>
+                    Moestwanted.Arts Inh. Michael Oßwald<br>
+                    Nikolaus Str. 6<br>
+                    70190 Stuttgart
+                </p>
+                <p>Steuernummer 55314/71205</p>
+
+                <h3 class="text-xl font-bold text-white mt-8 mb-4">KONTAKT:</h3>
+                <p>E-Mail: Moestwantedarts@gmail.com</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-6">HAFTUNGSAUSSCHLUSS (DISCLAIMER)</h2>
+
+                <h3 class="text-xl font-bold text-white mt-8 mb-4">Haftung für Inhalte</h3>
+                <p>
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
+                    allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+                    verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
+                    zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                </p>
+                <p>
+                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+                    Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+                    Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+                    Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                </p>
+
+                <h3 class="text-xl font-bold text-white mt-8 mb-4">Haftung für Links</h3>
+                <p>
+                    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss
+                    haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte
+                    der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
+                    verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
+                    Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+                </p>
+                <p>
+                    Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
+                    einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige
+                    Links umgehend entfernen.
+                </p>
+
+                <h3 class="text-xl font-bold text-white mt-8 mb-4">Urheberrecht</h3>
+                <p>
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
+                    deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
+                    außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors
+                    bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen
+                    Gebrauch gestattet.
+                </p>
+                <p>
+                    Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte
+                    Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+                    trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden
+                    Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="mb-2">© 2525 Moestwanted.Arts</p>
+            <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
