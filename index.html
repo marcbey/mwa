@@ -153,6 +153,86 @@
         <section>
             <div class="swiper mySwiper w-full h-[300px] md:h-[400px]">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-001.jpeg" data-src="assets/images/mwa-tattoo-home-001.jpeg" alt="Tattoo 1"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-002.jpeg" data-src="assets/images/mwa-tattoo-home-002.jpeg" alt="Tattoo 2"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-003.jpeg" data-src="assets/images/mwa-tattoo-home-003.jpeg" alt="Tattoo 3"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-004.jpeg" data-src="assets/images/mwa-tattoo-home-004.jpeg" alt="Tattoo 4"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-005.jpeg" data-src="assets/images/mwa-tattoo-home-005.jpeg" alt="Tattoo 5"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-006.jpeg" data-src="assets/images/mwa-tattoo-home-006.jpeg" alt="Tattoo 6"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-007.jpeg" data-src="assets/images/mwa-tattoo-home-007.jpeg" alt="Tattoo 7"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-008.jpeg" data-src="assets/images/mwa-tattoo-home-008.jpeg" alt="Tattoo 8"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-009.jpeg" data-src="assets/images/mwa-tattoo-home-009.jpeg" alt="Tattoo 9"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide h-full">
+                        <a href="gallery.html" class="block h-full w-full">
+                            <img src="assets/images/mwa-tattoo-home-010.jpeg" data-src="assets/images/mwa-tattoo-home-010.jpeg" alt="Tattoo 10"
+                                class="swiper-lazy w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                                loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -200,60 +280,35 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Dynamically load slider images by probing files; works with file:// and http(s)
-        async function loadSliderImages() {
-            const wrapper = document.querySelector('.swiper-wrapper');
-            if (!wrapper) return;
-
-            const images = [];
-            for (let i = 1; i <= 300; i++) {
-                const src = `assets/images/mwa-tattoo-home-${String(i).padStart(3, '0')}.jpeg`;
-                const exists = await new Promise((resolve) => {
-                    const img = new Image();
-                    img.onload = () => resolve(true);
-                    img.onerror = () => resolve(false);
-                    img.src = src;
-                });
-                if (!exists) break;
-                images.push(src);
-            }
-
-            if (!images.length) return;
-
-            wrapper.innerHTML = images.map((src, index) => `
-                <div class="swiper-slide h-full">
-                    <a href="gallery.html" class="block h-full w-full">
-                        <img src="${src}" alt="Tattoo ${index + 1}"
-                            class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                            loading="lazy">
-                    </a>
-                </div>
-            `).join('');
-
-            new Swiper(".mySwiper", {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-                centeredSlides: false,
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2.2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
+        // Swiper Init with lazy loading/preloading
+        new Swiper(".mySwiper", {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: false,
+            preloadImages: false,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 2,
+                loadOnTransitionStart: true,
+            },
+            watchSlidesProgress: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.2,
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                1024: {
+                    slidesPerView: 3,
                 },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-        }
-
-        loadSliderImages();
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
 
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
