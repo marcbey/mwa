@@ -8,8 +8,8 @@ A multi-page static site for a tattoo studio, built with plain HTML, Tailwind vi
 - Assets: `assets/logo`, `assets/images`, `assets/big-gallery`
 
 ## Notable behavior
-- Home slider loads images dynamically matching `assets/images/mwa-tattoo-home-XXX.jpeg` (001…); drop new sequential files and they appear automatically.
-- Gallery page builds its grid from `assets/big-gallery/*.AVIF` (predefined list in JS) and opens a Swiper-based lightbox to navigate all images.
+- Home slider uses Swiper with lazy loading; images are defined in markup (`assets/images/mwa-tattoo-home-001..010.jpeg`) and load on demand.
+- Gallery page builds its grid from `assets/images/` JPEGs (home 001–010 plus 100–148) and opens a Swiper-based lightbox with lazy loading/preloading.
 - Footers auto-fill the current year via a small script.
 
 ## Development
@@ -19,5 +19,5 @@ A multi-page static site for a tattoo studio, built with plain HTML, Tailwind vi
 - For local file access, some browsers may block fetch/head requests; prefer running a local server for full functionality.
 
 ## Adding images
-- Home slider: add `assets/images/mwa-tattoo-home-011.jpeg`, `...012.jpeg`, etc. (3-digit, no gaps).
-- Gallery: add AVIF files to `assets/big-gallery/` and reference them in the filenames array inside `gallery.html` (and `en/gallery.html`) if you expand beyond the current list.
+- Home slider: add `assets/images/mwa-tattoo-home-011.jpeg`, `...012.jpeg`, etc. (3-digit, no gaps) and update the slide markup as needed.
+- Gallery: add JPEG files following the existing patterns in `assets/images/` and extend the filename list in `gallery.html` / `en/gallery.html` if you want to include more.
