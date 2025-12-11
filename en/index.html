@@ -34,6 +34,41 @@
             --swiper-navigation-color: #fff;
             --swiper-pagination-color: #fff;
         }
+
+        /* Custom slider nav buttons */
+        .swiper-button-next,
+        .swiper-button-prev {
+            background: rgba(0, 0, 0, 0.2);
+            width: 38px;
+            height: 38px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(4px);
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .swiper-button-next:active,
+        .swiper-button-prev:active {
+            transform: translateY(0);
+        }
+
+        .swiper-button-disabled {
+            opacity: 0.25 !important;
+        }
     </style>
     <link rel="icon" type="image/jpeg" href="../assets/logo/elmo-2.jpg">
 </head>
@@ -48,10 +83,10 @@
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
-        <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+        <div class="container mx-auto px-4 py-0 flex items-center justify-between">
             <!-- Logo -->
-            <a href="index.html" class="block">
-                <img src="../assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto">
+            <a href="index.html" class="block pl-2 pr-4 py-4">
+                <img src="../assets/logo/mwa-logo-white.avif" alt="MWA Logo" class="h-20 w-auto my-2">
             </a>
 
             <div class="flex items-center gap-8">
@@ -118,50 +153,6 @@
         <section>
             <div class="swiper mySwiper w-full h-[300px] md:h-[400px]">
                 <div class="swiper-wrapper">
-                    <!-- Slides (Hardcoded 10 sample images based on pattern) -->
-                    <!-- Note: Using some actual filenames found + pattern for demo if needed, but safe assumption for now to repeat or use finding -->
-                    <!-- From previous step finding: IMG_3345.AVIF, 1-IMG_3265.AVIF, IMG_3312.AVIF, IMG_3304.AVIF... -->
-                    <!-- I will use a mix of known files. -->
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/1-IMG_3389.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 1"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/2-IMG_3360.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 2"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/3-IMG_3363.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 3"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/4-IMG_3307.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 4"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/5-IMG_3275.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 5"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/6-IMG_3392.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 6"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/7-IMG_3391.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 7"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/8-IMG_3395.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 8"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/9-IMG_3367.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 9"></a></div>
-                    <div class="swiper-slide h-full"><a href="gallery.html" class="block h-full w-full"><img
-                                src="../assets/big-gallery/10-IMG_3357.AVIF"
-                                class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
-                                loading="lazy" alt="Tattoo 10"></a></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -229,6 +220,61 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        // Dynamically load slider images by sequential file check (works with file:// and http)
+        async function loadSliderImages() {
+            const wrapper = document.querySelector('.swiper-wrapper');
+            if (!wrapper) return;
+
+            const images = [];
+            for (let i = 1; i <= 300; i++) {
+                const src = `../assets/images/mwa-tattoo-home-${String(i).padStart(3, '0')}.jpeg`;
+                const exists = await new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(true);
+                    img.onerror = () => resolve(false);
+                    img.src = src;
+                });
+                if (!exists) break;
+                images.push(src);
+            }
+
+            if (!images.length) return;
+
+            wrapper.innerHTML = images.map((src, index) => `
+                <div class="swiper-slide h-full">
+                    <a href="gallery.html" class="block h-full w-full">
+                        <img src="${src}" alt="Tattoo ${index + 1}"
+                            class="w-full h-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+                            loading="lazy">
+                    </a>
+                </div>
+            `).join('');
+
+            new Swiper(".mySwiper", {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+                centeredSlides: false,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2.2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }
+
+        loadSliderImages();
 
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
