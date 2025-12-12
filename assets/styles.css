@@ -47,6 +47,13 @@
     }
 }
 
+@media (min-width: 1024px) {
+    .page-title {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+}
+
 .site-header .site-logo {
     transition: height 0.2s ease, margin 0.2s ease;
 }
