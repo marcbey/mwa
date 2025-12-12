@@ -5,7 +5,7 @@ A multi-page static site for a tattoo studio, built with plain HTML, locally bui
 ## Structure
 - Root pages: `index.html`, `gallery.html`, `contact.html`, `faq.html`, `about-moe.html`, `impressum.html`
 - English pages: `en/` folder mirrors the above
-- Assets: `assets/logo`, `assets/images`, `assets/big-gallery`, fonts/CSS in `assets/`
+- Assets: `assets/logo`, `assets/images`, fonts/CSS in `assets/`
 
 ## Notable behavior
 - Home slider uses Swiper with lazy loading; images are defined in markup (`assets/images/mwa-tattoo-home-001..010.jpeg`) and load on demand.
