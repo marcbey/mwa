@@ -30,6 +30,21 @@
     .space-y-8 > :not([hidden]) ~ :not([hidden]) {
         margin-top: 0.5rem !important;
     }
+
+    /* Center lightbox slides horizontally in landscape */
+    .lightbox-swiper {
+        display: flex;
+        align-items: center;
+    }
+
+    .lightbox-swiper .swiper-wrapper {
+        align-items: center;
+    }
+
+    .lightbox-swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .site-header .site-logo {
