@@ -1,3 +1,20 @@
 .blank-river {
     font-family: 'Blank River', sans-serif;
 }
+
+.site-header .site-logo {
+    transition: height 0.2s ease, margin 0.2s ease;
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .site-header .logo-link {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .site-header .site-logo {
+        height: 3.5rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+}
