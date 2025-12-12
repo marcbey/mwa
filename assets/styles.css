@@ -17,6 +17,10 @@
     margin-bottom: 1rem !important;
 }
 
+.lightbox-close {
+    z-index: 50;
+}
+
 .blank-river {
     font-family: 'Blank River', sans-serif;
 }
@@ -49,8 +53,8 @@
 
 @media (min-width: 1024px) {
     .page-title {
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
     }
 }
 
