@@ -6,8 +6,30 @@
     font-display: swap;
 }
 
+.page-main {
+    padding-top: 1rem !important;
+    padding-bottom: 3rem !important;
+    margin-top: 0 !important;
+}
+
+.page-title {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
 .blank-river {
     font-family: 'Blank River', sans-serif;
+}
+
+@media (orientation: landscape) {
+    /* Tighten vertical gaps between stacked sections in landscape */
+    .space-y-12 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.75rem !important;
+    }
+
+    .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.5rem !important;
+    }
 }
 
 .site-header .site-logo {
