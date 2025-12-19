@@ -30,6 +30,20 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: Prepare FTP upload
+        run: |
+          rm -rf ftp-upload
+          mkdir -p ftp-upload
+          cp ./*.html ftp-upload/
+          cp -R ./en ./assets ftp-upload/
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 45.10.26.7
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          local-dir: ./ftp-upload/
+          server-dir: /httpdocs/
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
